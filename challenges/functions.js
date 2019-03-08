@@ -43,7 +43,7 @@ consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
 // Explain in your own words why `nestedfunction()` can access the variable `internal`.
 
 // Explanation: 
-
+//nested functions can access the variables of the enclosing ScopedCredential.
 
 const external = "I'm outside the function";
 

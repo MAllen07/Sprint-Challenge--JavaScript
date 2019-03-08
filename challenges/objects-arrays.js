@@ -7,6 +7,8 @@
 */
 // tyrannosaurus, carnivorous, 7000kg, 12m, Late Cretaceious
 
+//unsure if the const should say dinosaurs then the remainder stays the same since the object is dinosaurs?
+
 const tyrannosaurus = {
   name: 'tyrannosaurus',
   diet: 'carnivorous',
@@ -162,8 +164,8 @@ The zoos are concenred about animals with a lower population count. Find out whi
 
 */
 const lowerPopulation = [];
-zooAnimals.foreach(function(element) {
-  lowerPopulation.push(element.lowpopulationcount());
+zooAnimals.filter(function(element) {
+  lowerPopulation.push(element.animal_name.lessthan5());
 
 })
 console.log(lowerPopulation);
@@ -175,7 +177,7 @@ The zoos need to know their total animal population across the United States.  F
 */
 const populationTotal = 0;
 
-zooAnimals.forEach(function(element) {
+zooAnimals.reduce(function(element) {
   populationTotal.push(element.population);
 })
 const reducer = (accumulator, currentValue) => accumulator + currentValue;
