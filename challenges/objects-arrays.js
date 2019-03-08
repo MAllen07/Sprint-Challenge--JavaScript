@@ -161,9 +161,12 @@ console.log(lowerCase);
 The zoos are concenred about animals with a lower population count. Find out which animals have a population less than 5.
 
 */
-const largerPopulation = [];
+const lowerPopulation = [];
+zooAnimals.foreach(function(element) {
+  lowerPopulation.push(element.lowpopulationcount());
 
-console.log(largerPopulation);
+})
+console.log(lowerPopulation);
 
 /* Request 4: .reduce() 
 
@@ -171,7 +174,13 @@ The zoos need to know their total animal population across the United States.  F
 
 */
 const populationTotal = 0;
-console.log(populationTotal);
+
+zooAnimals.forEach(function(element) {
+  populationTotal.push(element.population);
+})
+const reducer = (accumulator, currentValue) => accumulator + currentValue;
+console.log(populationTotal.reduce(reducer));
+
 
 
 /* 
